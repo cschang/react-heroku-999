@@ -1,15 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import Home from './pages/'
+import SigninPage from './pages/signin';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          123
-        </p>
-      </header>
+    <div>
+      <a id="init" href="/" style={{ display: "none" }}>
+        111
+      </a>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/signin" component={SigninPage} exact />
+        </Switch>
+      </Router>
     </div>
   );
 }
