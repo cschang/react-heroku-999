@@ -5,17 +5,12 @@ import SigninPage from './pages/signin';
 
 function App() {
   return (
-    <div>
-      <a id="init" href="/" style={{ display: "none" }}>
-        111
-      </a>
-      <Router>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/signin" component={SigninPage} exact />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/signin" component={SigninPage} exact />
+      </Switch>
+    </Router>
   );
 }
 
